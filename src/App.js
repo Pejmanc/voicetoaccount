@@ -5,6 +5,7 @@ import { SpeechState, useSpeechContext } from "@speechly/react-client";
 import {
   PushToTalkButton,
   PushToTalkButtonContainer,
+  ErrorPanel,
 } from "@speechly/react-ui";
 
 import { Details, Main } from "./components";
@@ -47,6 +48,7 @@ const App = () => {
         </Grid>
         <PushToTalkButtonContainer>
           <PushToTalkButton />
+          <ErrorPanel />
         </PushToTalkButtonContainer>
       </Grid>
     </div>
