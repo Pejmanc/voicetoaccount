@@ -14,6 +14,7 @@ import useStyles from "./styles";
 const App = () => {
   const classes = useStyles();
   const { speechState } = useSpeechContext();
+
   const main = useRef(null);
 
   const executeScroll = () => main.current.scrollIntoView();
@@ -21,6 +22,7 @@ const App = () => {
   useEffect(() => {
     if (speechState === SpeechState.Recording) {
       executeScroll();
+      console.log(speechState);
     }
   }, [speechState]);
 
@@ -46,10 +48,10 @@ const App = () => {
         <Grid item xs={12} sm={4} className={classes.last}>
           <Details title="Expense" />
         </Grid>
-        <PushToTalkButtonContainer>
+        {/* <PushToTalkButtonContainer>
           <PushToTalkButton />
           <ErrorPanel />
-        </PushToTalkButtonContainer>
+        </PushToTalkButtonContainer> */}
       </Grid>
     </div>
   );
